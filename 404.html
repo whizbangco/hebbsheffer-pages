@@ -12,7 +12,7 @@
       var prefix = '/portal/';
       var path = location.pathname;
       if (path.indexOf(prefix) === 0) {
-        location.replace('/portal/#/' + path.slice(prefix.length) + location.search);
+        location.replace('/portal/#/portal/' + path.slice(prefix.length) + location.search);
       }
     })();
   </script>
