@@ -1,0 +1,1 @@
+const e={LoginSource:"inreach_login_source",SessCookieAdvisory:"inreach_sesscookie"};function s(){return window.location.hostname.toLowerCase().split(".")}function i(){return s().slice(-2).join(".")}function t(o){const n=s();return n[0]=o,n.join(".")}export{e as c,t as h,i as r};
