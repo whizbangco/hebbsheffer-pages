@@ -5,14 +5,18 @@
   <meta charset="utf-8">
   <script type="text/javascript">
     // Stale-link safety net: old bookmarks/search results pointing at clean
-    // /portal/... paths (pre-dating the switch to hash-mode routing) get
-    // sent to the equivalent /portal/#/... route. Everything else falls
-    // through to this page's normal "not found" content below.
+    // /portal/... or /app/... paths (pre-dating the switch to hash-mode
+    // routing) get sent to the equivalent /app/#/portal/... route.
+    // Everything else falls through to this page's normal "not found"
+    // content below.
     (function () {
-      var prefix = '/portal/';
+      var prefixes = ['/portal/', '/app/'];
       var path = location.pathname;
-      if (path.indexOf(prefix) === 0) {
-        location.replace('/portal/#/portal/' + path.slice(prefix.length) + location.search);
+      for (var i = 0; i < prefixes.length; i++) {
+        if (path.indexOf(prefixes[i]) === 0) {
+          location.replace('/app/#/portal/' + path.slice(prefixes[i].length) + location.search);
+          return;
+        }
       }
     })();
   </script>
