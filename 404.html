@@ -10,11 +10,12 @@
     // Everything else falls through to this page's normal "not found"
     // content below.
     (function () {
-      var prefixes = ['/portal/', '/app/'];
+      var prefixes = ['/portal', '/app'];
       var path = location.pathname;
       for (var i = 0; i < prefixes.length; i++) {
-        if (path.indexOf(prefixes[i]) === 0) {
-          location.replace('/app/#/portal/' + path.slice(prefixes[i].length) + location.search);
+        var prefix = prefixes[i];
+        if (path === prefix || path.indexOf(prefix + '/') === 0) {
+          location.replace('/app/#/portal/' + path.slice(prefix.length + 1) + location.search);
           return;
         }
       }
