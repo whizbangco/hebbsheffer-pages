@@ -3504,7 +3504,7 @@ Webflow.define('scroll', module.exports = function ($) {
       if (oldHash !== hash) {
         history.pushState({
           hash: hash
-        }, '', hash);
+        }, '', loc.pathname + loc.search + hash);
       }
     }
   }
