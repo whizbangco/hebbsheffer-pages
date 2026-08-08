@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "target": "hebbsheffer-ca-beta",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      ".claude/**",
+      "CNAME",
+      "401.html"
+    ],
+    "rewrites": [
+      {
+        "source": "/app/**",
+        "destination": "/app/index.html"
+      }
+    ]
+  }
+}
