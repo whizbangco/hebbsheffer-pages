@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "inreach-ntrprod"
+  },
+  "targets": {
+    "inreach-ntrprod": {
+      "hosting": {
+        "hebbsheffer-ca-beta": [
+          "hebbsheffer-ca-beta"
+        ]
+      }
+    }
+  }
+}
