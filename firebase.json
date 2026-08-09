@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "target": "hebbsheffer-ca-prod",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      ".claude/**",
+      "CNAME"
+    ],
+    "rewrites": [
+      {
+        "source": "/app/**",
+        "destination": "/app/index.html"
+      }
+    ]
+  }
+}
