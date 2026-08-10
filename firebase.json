@@ -7,7 +7,9 @@
       "**/.*",
       "**/node_modules/**",
       ".claude/**",
-      "CNAME"
+      "CNAME",
+      "robots-prod.txt",
+      "deploy-prod.sh"
     ],
     "rewrites": [
       {
