@@ -1,19 +1,38 @@
 {
-  "hosting": {
-    "target": "hebbsheffer-ca-prod",
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      ".claude/**",
-      "CNAME"
-    ],
-    "rewrites": [
-      {
-        "source": "/app/**",
-        "destination": "/app/index.html"
-      }
-    ]
-  }
+  "hosting": [
+    {
+      "target": "hebbsheffer-ca-prod",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        ".claude/**",
+        "CNAME"
+      ],
+      "rewrites": [
+        {
+          "source": "/app/**",
+          "destination": "/app/index.html"
+        }
+      ]
+    },
+    {
+      "target": "hebbsheffer-ca-staging",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        ".claude/**",
+        "CNAME"
+      ],
+      "rewrites": [
+        {
+          "source": "/app/**",
+          "destination": "/app/index.html"
+        }
+      ]
+    }
+  ]
 }

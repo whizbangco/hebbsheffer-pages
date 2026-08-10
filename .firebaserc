@@ -7,6 +7,9 @@
       "hosting": {
         "hebbsheffer-ca-prod": [
           "hebbsheffer-ca-prod"
+        ],
+        "hebbsheffer-ca-staging": [
+          "hebbsheffer-ca-staging"
         ]
       }
     }
